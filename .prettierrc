@@ -1,6 +1,20 @@
 {
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-organize-attributes"],
+  "attributeGroups": [
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_OUTPUT",
+    "$ANGULAR_STRUCTURAL_DIRECTIVE"
+  ],
   "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
   "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "singleAttributePerLine": true,
   "overrides": [
     {
       "files": "*.html",
