@@ -2,6 +2,14 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
 
+# QUICK START
+
+base: npm i
+start app: npm run start
+json server: json-server --watch db.json
+
+profit!
+
 ## Development server
 
 To start a local development server, run:
