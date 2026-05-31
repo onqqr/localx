@@ -15,18 +15,29 @@ export class Home {
 
   housingLocationList: HousingLocationInfo[] = [];
   filteredLocationList: HousingLocationInfo[] = [];
+  serverError = false;
 
   constructor() {
+    this.loadData();
+  }
+
+  loadData() {
     this.housingService
       .getAllHousingLocations()
       .then((housingLocationList: HousingLocationInfo[]) => {
         this.housingLocationList = housingLocationList;
         this.filteredLocationList = housingLocationList;
+        this.serverError = false;
+        this.cdr.markForCheck();
+      })
+      .catch(() => {
+        this.serverError = true;
         this.cdr.markForCheck();
       });
   }
 
   filterResults(text: string) {
+    if (this.serverError) return;
     if (!text) {
       this.filteredLocationList = this.housingLocationList;
       return;

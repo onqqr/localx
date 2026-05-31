@@ -14,8 +14,14 @@
     </button>
   </form>
 </section>
-<section class="results">
-  @for (housingLocation of filteredLocationList; track $index) {
-    <app-housing-location [housingLocation]="housingLocation" />
-  }
-</section>
+@if (serverError) {
+  <div style="padding: 50px">
+    at start <strong>npm run json-server</strong> pls, and reload page
+  </div>
+} @else {
+  <section class="results">
+    @for (housingLocation of filteredLocationList; track $index) {
+      <app-housing-location [housingLocation]="housingLocation" />
+    }
+  </section>
+}

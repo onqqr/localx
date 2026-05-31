@@ -6,7 +6,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 base: npm i
 start app: npm run start
-json server: json-server --watch db.json
+json server: npm run json-server
 
 profit!
 
