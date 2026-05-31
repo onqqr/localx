@@ -2,10 +2,11 @@ import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { HousingService } from '../../core/services/housting';
 import { HousingLocationInfo } from '../../types/housing-location';
 import { HousingLocation } from '../housing-location/housing-location';
+import { TestRxjs } from '../test-rxjs/test-rxjs';
 
 @Component({
   selector: 'app-home',
-  imports: [HousingLocation],
+  imports: [HousingLocation, TestRxjs],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
